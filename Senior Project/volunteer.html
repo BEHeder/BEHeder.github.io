@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Volunteer Opportunities</title>
+        <link rel="stylesheet" href="topnav.css">
+        <!-- The following line is from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+                background-image: url('images/CSHF\ Service\ Opportunities\ of\ Webpage.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                text-align: center;
+            }
+            .grid-container {
+                display: grid;
+                gap: 0px;
+                grid-template-columns: auto;
+            }
+            .grid-item {
+                margin: auto;
+                width: 300px;
+                height: 300px;
+                overflow: scroll;
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="topnav" id="topnav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="activities.html">Activities & Events</a>
+            <a href="newsletter.html">Newsletters</a>
+            <a href="history.html">History</a>
+            <a href="thrift.html">Thrift Store</a>
+            <a href="volunteer.html" class="active">Volunteer Opportunities</a>
+            <a href="resources.html">Community Resources</a>
+            <a href="businesses.html">Local Businesses</a>
+            <a href="donate.html">Donate</a>
+            <!-- The following three lines are from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+            <a href="javascript:void(0);" class="icon" onclick="openCloseNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <!-- <h1>Volunteer Opportunities</h1> -->
+        <br><br><br><br><br><div class="grid-container">
+            <div class="grid-item">
+                <h3>Opportunity</h3>
+                <p>Date Needed: 
+                <br>Contact Person: 
+                <br>Location/Deliver To: 
+                <br>Additional Information: </p>
+
+                <h3>Opportunity</h3>
+                <p>Date Needed: 
+                <br>Contact Person: 
+                <br>Location/Deliver To: 
+                <br>Additional Information: </p>
+
+                <h3>Opportunity</h3>
+                <p>Date Needed: 
+                <br>Contact Person: 
+                <br>Location/Deliver To: 
+                <br>Additional Information: </p>
+                
+                <h3>Opportunity</h3>
+                <p>Date Needed: 
+                <br>Contact Person: 
+                <br>Location/Deliver To: 
+                <br>Additional Information: </p>
+                
+                <h3>Opportunity</h3>
+                <p>Date Needed: 
+                <br>Contact Person: 
+                <br>Location/Deliver To: 
+                <br>Additional Information: </p>
+                
+                <h3>Opportunity</h3>
+                <p>Date Needed: 
+                <br>Contact Person: 
+                <br>Location/Deliver To: 
+                <br>Additional Information: </p>
+                
+            </div>
+        </div>
+
+        <script>
+            // The following function is from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+            function openCloseNav() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </body>
+</html>

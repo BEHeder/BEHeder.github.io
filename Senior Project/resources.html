@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CS Community Resources</title>
+        <link rel="stylesheet" href="topnav.css">
+        <!-- The following line is from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+                background-image: url('CSOldSchool.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 25px;
+            }
+            .grid-item {
+                background-color: white;
+            }
+            .grid-item img {
+                float: left;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="topnav" id="topnav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="activities.html">Activities & Events</a>
+            <a href="newsletter.html">Newsletters</a>
+            <a href="history.html">History</a>
+            <a href="thrift.html">Thrift Store</a>
+            <a href="volunteer.html">Volunteer Opportunities</a>
+            <a href="resources.html" class="active">Community Resources</a>
+            <a href="businesses.html">Local Businesses</a>
+            <a href="donate.html">Donate</a>
+            <!-- The following three lines are from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+            <a href="javascript:void(0);" class="icon" onclick="openCloseNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="images/CSPostOffice.png" alt="Clay Springs Post Office">
+                <h3>Clay Springs Post Office</h3>
+                <p><a href="https://tools.usps.com/find-location.htm?location=1358241">tools.usps.com/find-location.htm?location=1358241</a>
+                    <!-- <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis porta enim, a accumsan ipsum. Sed varius tincidunt augue nec sagittis. Vestibulum mattis luctus augue, ac viverra nulla aliquam suscipit. Phasellus non tristique dolor, eu mattis nisi. In eleifend, dolor sit amet efficitur convallis, nulla eros scelerisque sapien, vel elementum nisi dolor et dui. Cras ullamcorper et magna et interdum. Curabitur sagittis lorem ac augue pellentesque semper. -->
+                </p>
+            </div>
+            <div class="grid-item">
+                <img src="images/CSWater.png" alt="Clay Springs Water Service">
+                <h3>Clay Springs Domestic Water Improvement District</h3>
+                <p><a href="https://clayspringswater.org/">clayspringswater.org/</a>
+                    <!-- <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis porta enim, a accumsan ipsum. Sed varius tincidunt augue nec sagittis. Vestibulum mattis luctus augue, ac viverra nulla aliquam suscipit. Phasellus non tristique dolor, eu mattis nisi. In eleifend, dolor sit amet efficitur convallis, nulla eros scelerisque sapien, vel elementum nisi dolor et dui. Cras ullamcorper et magna et interdum. Curabitur sagittis lorem ac augue pellentesque semper. -->
+                </p>
+            </div>
+            <div class="grid-item">
+                <img src="images/CSFire.jpg" alt="Clay Springs Pinedale Fire Department">
+                <h3>Clay Springs Pinedale Fire Department</h3>
+                <p><a href="https://clayspringspinedalefiredepartment.org/">clayspringspinedalefiredepartment.org/</a>
+                    <!-- <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis porta enim, a accumsan ipsum. Sed varius tincidunt augue nec sagittis. Vestibulum mattis luctus augue, ac viverra nulla aliquam suscipit. Phasellus non tristique dolor, eu mattis nisi. In eleifend, dolor sit amet efficitur convallis, nulla eros scelerisque sapien, vel elementum nisi dolor et dui. Cras ullamcorper et magna et interdum. Curabitur sagittis lorem ac augue pellentesque semper. -->
+                </p>
+            </div>
+            <div class="grid-item">
+                <img src="images/CSCemetery.jpg" alt="Clay Springs Historical Society (Cemetery)">
+                <h3>Clay Springs Historical Society (Cemetery)</h3>
+                <p>Contact Beverly Jackson 928-739-4277
+                    <!-- <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis porta enim, a accumsan ipsum. Sed varius tincidunt augue nec sagittis. Vestibulum mattis luctus augue, ac viverra nulla aliquam suscipit. Phasellus non tristique dolor, eu mattis nisi. In eleifend, dolor sit amet efficitur convallis, nulla eros scelerisque sapien, vel elementum nisi dolor et dui. Cras ullamcorper et magna et interdum. Curabitur sagittis lorem ac augue pellentesque semper. -->
+                </p>
+            </div>
+            <div class="grid-item">
+                <img src="images/CSLibrary.jpg" alt="Clay Springs Public Library">
+                <h3>Clay Springs Public Library</h3>
+                <p><a href="https://www.navajocountylibraries.org/Pages/Index/91118/clay-springs-public-library">www.navajocountylibraries.org/Pages/Index/91118/clay-springs-public-library</a>
+                    <!-- <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis porta enim, a accumsan ipsum. Sed varius tincidunt augue nec sagittis. Vestibulum mattis luctus augue, ac viverra nulla aliquam suscipit. Phasellus non tristique dolor, eu mattis nisi. In eleifend, dolor sit amet efficitur convallis, nulla eros scelerisque sapien, vel elementum nisi dolor et dui. Cras ullamcorper et magna et interdum. Curabitur sagittis lorem ac augue pellentesque semper. -->
+                </p>
+            </div>
+            <div class="grid-item">
+                <img src="images/CSCommunity.jpg" alt="Clay Springs AZ Community">
+                <h3>Clay Springs, AZ Community</h3>
+                <p><a href="https://www.facebook.com/groups/413920477150718">www.facebook.com/groups/413920477150718</a>
+                    <!-- <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis porta enim, a accumsan ipsum. Sed varius tincidunt augue nec sagittis. Vestibulum mattis luctus augue, ac viverra nulla aliquam suscipit. Phasellus non tristique dolor, eu mattis nisi. In eleifend, dolor sit amet efficitur convallis, nulla eros scelerisque sapien, vel elementum nisi dolor et dui. Cras ullamcorper et magna et interdum. Curabitur sagittis lorem ac augue pellentesque semper. -->
+                </p>
+            </div>
+            <div class="grid-item">
+                <img src="images/CSLivery.jpg" alt="The Livery on 260">
+                <h3>The Livery on 260</h3>
+                <p><a href="https://www.facebook.com/photo/?fbid=115771881286149&set=a.102884769241527">www.facebook.com/photo/?fbid=115771881286149&set=a.102884769241527</a>
+                    <!-- <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis porta enim, a accumsan ipsum. Sed varius tincidunt augue nec sagittis. Vestibulum mattis luctus augue, ac viverra nulla aliquam suscipit. Phasellus non tristique dolor, eu mattis nisi. In eleifend, dolor sit amet efficitur convallis, nulla eros scelerisque sapien, vel elementum nisi dolor et dui. Cras ullamcorper et magna et interdum. Curabitur sagittis lorem ac augue pellentesque semper. -->
+                </p>
+            </div>
+            <div class="grid-item">
+                <img src="images/AZHCCampground.jpg" alt="Arizona High Country Campground">
+                <h3>Arizona High Country Campground</h3>
+                <p><a href="https://arizonahighcountrycampground.com/az-campground">arizonahighcountrycampground.com/az-campground</a>
+                    <!-- <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis porta enim, a accumsan ipsum. Sed varius tincidunt augue nec sagittis. Vestibulum mattis luctus augue, ac viverra nulla aliquam suscipit. Phasellus non tristique dolor, eu mattis nisi. In eleifend, dolor sit amet efficitur convallis, nulla eros scelerisque sapien, vel elementum nisi dolor et dui. Cras ullamcorper et magna et interdum. Curabitur sagittis lorem ac augue pellentesque semper. -->
+                </p>
+            </div>
+            <div class="grid-item">
+                <img src="images/NavajoCounty.png" alt="Navajo County">
+                <h3>Navajo County</h3>
+                <p><a href="https://navajocountyaz.gov/">navajocountyaz.gov/</a>
+                    <!-- <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis porta enim, a accumsan ipsum. Sed varius tincidunt augue nec sagittis. Vestibulum mattis luctus augue, ac viverra nulla aliquam suscipit. Phasellus non tristique dolor, eu mattis nisi. In eleifend, dolor sit amet efficitur convallis, nulla eros scelerisque sapien, vel elementum nisi dolor et dui. Cras ullamcorper et magna et interdum. Curabitur sagittis lorem ac augue pellentesque semper. -->
+                </p>
+            </div>
+        </div>
+
+        <script>
+            // The following function is from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+            function openCloseNav() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </body>
+</html>

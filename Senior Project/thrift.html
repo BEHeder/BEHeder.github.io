@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CS Thrift Store</title>
+        <link rel="stylesheet" href="topnav.css">
+        <!-- The following line is from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="topnav" id="topnav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="activities.html">Activities & Events</a>
+            <a href="newsletter.html">Newsletters</a>
+            <a href="history.html">History</a>
+            <a href="thrift.html" class="active">Thrift Store</a>
+            <a href="volunteer.html">Volunteer Opportunities</a>
+            <a href="resources.html">Community Resources</a>
+            <a href="businesses.html">Local Businesses</a>
+            <a href="donate.html">Donate</a>
+            <!-- The following three lines are from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+            <a href="javascript:void(0);" class="icon" onclick="openCloseNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <br><img src="CSOldSchool.jpg" alt="Clay Springs Old School">
+        <h1>Clay Springs Thrift Store</h1>
+        
+        <p>Preserve Heritage * Nurture Community * Promote Charity, Self-Reliance & Culture
+
+            <br>2114 Sandstone Rd, Clay Springs, AZ
+            <br>(928) 251-4392
+            <br>Open Wed. & Sat., 10:00 AM - 3:00 PM
+            
+            <br><button id="sale1">Sale 1</button>
+            <button id="sale2">Sale 2</button>
+            <button id="sale3">Sale 3</button>
+            <button id="sale4">Sale 4</button>
+            <button id="sale5">Sale 5</button>
+        </p>
+
+        <script>
+            // The following function is from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+            function openCloseNav() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </body>
+</html>
