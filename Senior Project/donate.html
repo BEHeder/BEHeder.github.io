@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Donate to CSHF</title>
+        <link rel="stylesheet" href="topnav.css">
+        <!-- The following line is from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+                background-image: url('CSOldSchool.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="topnav" id="topnav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="activities.html">Activities & Events</a>
+            <a href="newsletter.html">Newsletters</a>
+            <a href="history.html">History</a>
+            <a href="thrift.html">Thrift Store</a>
+            <a href="volunteer.html">Volunteer Opportunities</a>
+            <a href="resources.html">Community Resources</a>
+            <a href="businesses.html">Local Businesses</a>
+            <a href="donate.html" class="active">Donate</a>
+            <!-- The following three lines are from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+            <a href="javascript:void(0);" class="icon" onclick="openCloseNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <p>Why hello there!</p>
+
+        <script>
+            // The following function is from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+            function openCloseNav() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </body>
+</html>

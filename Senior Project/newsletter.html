@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSHF Newsletters</title>
+        <link rel="stylesheet" href="topnav.css">
+        <!-- The following line is from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+                background-image: url('CSOldSchool.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                text-align: center;
+            }
+            .grid-container {
+                display: grid;
+                gap: 25px;
+                grid-template-columns: auto auto auto auto auto;
+            }
+            .grid-item-left {
+                margin: auto;
+                width: 100%;
+                height: 500px;
+                overflow: scroll;
+            }
+            .grid-item-center {
+                margin: auto;
+                width: 100%;
+                height: 500px;
+                overflow: auto;
+                grid-column: 2 / 5;
+            }
+            .grid-item-right {
+                margin: auto;
+                width: 100%;
+                height: 500px;
+                overflow: scroll;
+            }            
+        </style>
+    </head>
+    <body>
+        <nav class="topnav" id="topnav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="activities.html">Activities & Events</a>
+            <a href="newsletter.html" class="active">Newsletters</a>
+            <a href="history.html">History</a>
+            <a href="thrift.html">Thrift Store</a>
+            <a href="volunteer.html">Volunteer Opportunities</a>
+            <a href="resources.html">Community Resources</a>
+            <a href="businesses.html">Local Businesses</a>
+            <a href="donate.html">Donate</a>
+            <!-- The following three lines are from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+            <a href="javascript:void(0);" class="icon" onclick="openCloseNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <h1>Coming Soon!</h1>
+        <div class="grid-container">
+            <div class="grid-item-left">
+                <br><button onclick="document.location='submitarticle.html'">Submit Article</button>
+            </div>
+            <iframe class="grid-item-center" id="myPDF" src="newsletters/PDFplaceholder.pdf" title="PDF Placeholder"></iframe>
+            <div class="grid-item-right">
+                <br><button id="newsletters/PDFplaceholder.pdf" onclick="reloadPDF(id)">PDF Placeholder 1</button>
+                <br><button id="newsletters/PDFplaceholder2.pdf" onclick="reloadPDF(id)">PDF Placeholder 2</button>
+            </div>
+        </div>
+
+        <script>
+            function reloadPDF(id) {
+                document.getElementById('myPDF').src = id;
+            }
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+            function openCloseNav() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
+    </body>
+</html>

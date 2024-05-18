@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clay Springs Heritage Foundation</title>
+        <link rel="stylesheet" href="topnav.css">
+        <!-- The following line is from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            /* body {
+                background-image: url('CSOldSchool.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                text-align: center;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 25px;
+            }
+            .grid-item-center {
+                height: 100px;
+                width: 100px;
+                margin: auto;
+                border-radius: 50%;
+            }
+            .grid-item-left {
+                height: 100px;
+                width: 100px;
+                margin: auto auto auto auto;
+                border-radius: 50%;
+            }
+            .grid-item-right {
+                height: 100px;
+                width: 100px;
+                margin: auto auto auto auto;
+                border-radius: 50%;
+            } */
+            #homemap {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 1000px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="topnav" id="topnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="activities.html">Activities & Events</a>
+            <a href="newsletter.html">Newsletters</a>
+            <a href="history.html">History</a>
+            <a href="thrift.html">Thrift Store</a>
+            <a href="volunteer.html">Volunteer Opportunities</a>
+            <a href="resources.html">Community Resources</a>
+            <a href="businesses.html">Local Businesses</a>
+            <a href="donate.html">Donate</a>
+            <!-- The following three lines are from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+            <a href="javascript:void(0);" class="icon" onclick="openCloseNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <img src="images/CSHF Title of Webpage.jpg" alt="Clay Springs Heritage Foundation Home Page" usemap="#homemap" id="homemap">
+        <map name="homemap">
+            <area shape="rect" coords="25,25,198,92" href="activities.html">
+            <area shape="rect" coords="222,25,393,92" href="resources.html">
+            <area shape="rect" coords="415,25,588,92" href="businesses.html">
+            <area shape="rect" coords="608,25,781,92" href="volunteer.html">
+            <area shape="rect" coords="804,25,975,92" href="about.html">
+            <area shape="rect" coords="25,138,238,226" href="thrift.html">
+            <area shape="rect" coords="273,138,486,226" href="test.html">
+            <area shape="rect" coords="515,138,726,226" href="donate.html">
+            <area shape="rect" coords="761,138,974,226" href="newsletter.html">
+        </map>
+
+        <!-- <h1>Clay Springs Heritage Foundation</h1>
+        <p>Preserve Heritage * Nurture Community * Promote Charity, Self-Reliance & Culture</p>
+
+        <div class="grid-container">
+            <button class="grid-item-left" onclick="document.location='newsletter.html'">Newsletters</button>
+            <button class="grid-item-center" onclick="document.location='about.html'">About Us</button>
+            <button class="grid-item-right" onclick="document.location='activities.html'">Activities & Events</button>
+            <button class="grid-item-left" onclick="document.location='resources.html'">Community Resources</button>
+            <button class="grid-item-center" onclick="document.location='donate.html'">Donate</button>
+            <button class="grid-item-right" onclick="document.location='thrift.html'">Thrift Store</button>
+            <button class="grid-item-left" onclick="document.location='businesses.html'">Local Businesses</button>
+            <button class="grid-item-center" onclick="document.location='history.html'">History</button>
+            <button class="grid-item-right" onclick="document.location='volunteer.html'">Volunteer Opportunities</button>
+        </div> -->
+
+        <script>
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+            function openCloseNav() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </body>
+</html>
