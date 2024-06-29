@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "Dragon Generator"
 permalink: /dragongen/
 ---
