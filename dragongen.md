@@ -4,7 +4,6 @@ title: "Bryan Heder's Dragon Generator"
 permalink: /dragongen.html/
 ---
 
-<!doctype html>
 <html>
   <head>
     <title>Bryan Heder's Dragon Generator</title>
