@@ -7,6 +7,14 @@ permalink: /dragongen.html/
 <html>
   <head>
 <!--     <title>Bryan Heder's Dragon Generator</title> -->
+    <!-- JavaScript -->
+    <script language="JavaScript">
+      function showInput() {
+        document.getElementById("output").innerHTML = 
+          document.getElementById("name").value + 
+          document.getElementById("size").value;
+      }
+    </script>
   </head>
   <body>
     <h1>Dragon Generator</h1>
@@ -29,13 +37,5 @@ permalink: /dragongen.html/
     <!-- Output -->
     <p>Output: </p>
     <p id="output"></p>
-    <!-- JavaScript -->
-    <script language="JavaScript">
-      function showInput() {
-        document.getElementById("output").innerHTML = 
-          document.getElementById("name").value + 
-          document.getElementById("size").value;
-      }
-    </script>
   </body>
 </html>
