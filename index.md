@@ -16,6 +16,7 @@ title: Bryan Heder's Website
     Senior Project Preview
   </a>
 </p>
+<hr>
 
 <h2>D&D Character Generator</h2>
 <p>
@@ -27,6 +28,7 @@ title: Bryan Heder's Website
     D&D Character Generator Code
   </a>
 </p>
+<hr>
 
 <h2>Dragon Generator</h2>
 <p>
