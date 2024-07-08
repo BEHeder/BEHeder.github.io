@@ -31,10 +31,14 @@ permalink: /dragongen.html/
     <!-- JavaScript -->
     <script language="JavaScript">
       function showInput() {
-        const form = document.forms["form1"];
         let text = document.getElementById("output").innerHTML;
-        text += document.getElementById("name").value + 
-          document.getElementsByName("size").value;
+        text += document.getElementById("name").value + " the ";
+        const size = document.getElementsByName("size");
+        for (let i = 0; i < size.length; i++) {
+          if (size[i].checked) {
+            text += size[i].value + " Dragon";
+          }
+        }
         document.getElementById("output").innerHTML = text;
       }
     </script>
