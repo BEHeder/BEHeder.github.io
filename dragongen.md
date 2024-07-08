@@ -24,23 +24,17 @@ permalink: /dragongen.html/
       <input type="radio" id="large" name="size" value="Large" required>
       <label for="large">Large</label><br>
       <!-- Submit -->
-      <input type="submit" onclick="showInput();">
+      <button type="button" onclick="showInput();">Submit</button>
     </form>
     <!-- Output -->
-    <p>Output: </p>
-    <p id="output"></p>
+    <p id="output">Output: </p>
     <!-- JavaScript -->
     <script language="JavaScript">
       function showInput() {
         const form = document.forms["form1"];
-        let text = "";
-        for (let i = 0; i < form.length; i++) {
-          text += form.elements[i].value;
-          if (i + 1 != form.length) {
-            text += " ";
-          }
-        }
-        text += "<br>";
+        let text = document.getElementById("output").innerHTML;
+        text += document.getElementById("name").value + 
+          document.getElementsByName("size").value;
         document.getElementById("output").innerHTML = text;
       }
     </script>
