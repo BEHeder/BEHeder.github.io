@@ -2,7 +2,7 @@
 layout: default
 title: Bryan Heder's Website
 ---
-<h1>Senior Project</h1>
+<h2>Senior Project</h2>
 <p>
   The purpose of this project is to build a website 
   that can help bring together the members of the Clay Springs community 
@@ -16,7 +16,8 @@ title: Bryan Heder's Website
     Senior Project Preview
   </a>
 </p>
-<h1>D&D Character Generator</h1>
+
+<h2>D&D Character Generator</h2>
 <p>
   This project will be to develop a limited generator for a Dungeons & Dragons character. 
   The company behind the D&D game released a System Reference Document (SRD) that has 
@@ -25,4 +26,11 @@ title: Bryan Heder's Website
   <a href="https://github.com/BEHeder/BEHeder.github.io/tree/main/BEHeder_char_gen">
     D&D Character Generator Code
   </a>
+</p>
+
+<h2>Dragon Generator</h2>
+<p>
+  A random generator that results in a dragon.
+  <br>
+  <a href="https://beheder.github.io/dragongen.html/">Dragon Generator</a>
 </p>
