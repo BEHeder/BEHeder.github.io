@@ -14,7 +14,7 @@ permalink: /dragongen.html/
     <form id="form1">
       <!-- Name -->
       <label for="name">Enter the dragon's name: </label>
-      <input type="text" id="name" name="name" required><br><br>
+      <input type="text" id="name" name="name" required><br>
       <!-- Size -->
       Select the dragon's size: <br>
       <input type="radio" id="small" name="size" value="Small" required>
@@ -27,11 +27,12 @@ permalink: /dragongen.html/
       <button type="button" onclick="showInput();">Submit</button>
     </form>
     <!-- Output -->
-    <p id="output">Output: </p>
+    <p>Result: </p>
+    <p id="result"></p>
     <!-- JavaScript -->
     <script language="JavaScript">
       function showInput() {
-        let text = document.getElementById("output").innerHTML;
+        let text = "";
         text += document.getElementById("name").value + " the ";
         const size = document.getElementsByName("size");
         for (let i = 0; i < size.length; i++) {
@@ -39,7 +40,7 @@ permalink: /dragongen.html/
             text += size[i].value + " Dragon";
           }
         }
-        document.getElementById("output").innerHTML = text;
+        document.getElementById("result").innerHTML = text;
       }
     </script>
     </body>
