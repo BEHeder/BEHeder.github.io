@@ -4,16 +4,24 @@ body {
 
 nav {
   background-color: white;
+  border: 4px double purple;
+  border-radius: 10px;
 }
 
 h1 {
   background-color: white;
+  border: 4px double purple;
+  border-radius: 10px;
 }
 
 section {
   background-color: white;
+  border: 4px double purple;
+  border-radius: 10px;
 }
 
 footer {
   background-color: white;
+  border: 4px double purple;
+  border-radius: 10px;
 }
