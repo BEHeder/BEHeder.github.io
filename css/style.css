@@ -1,5 +1,7 @@
 body {
-  background-color: gray;
+  background-color: silver;
+  width: 60%;
+  text-align: center;
 }
 
 nav {
