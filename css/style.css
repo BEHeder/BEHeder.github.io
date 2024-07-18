@@ -1,29 +1,30 @@
 body {
   background-color: silver;
+  margin: auto;
   width: 60%;
-  text-align: center;
 }
 
 nav {
   background-color: white;
-  border: 4px double purple;
+  border: 4px groove purple;
   border-radius: 10px;
 }
 
 h1 {
   background-color: white;
-  border: 4px double purple;
+  border: 4px groove purple;
   border-radius: 10px;
+  text-align: center;
 }
 
 section {
   background-color: white;
-  border: 4px double purple;
+  border: 4px groove purple;
   border-radius: 10px;
 }
 
 footer {
   background-color: white;
-  border: 4px double purple;
+  border: 4px groove purple;
   border-radius: 10px;
 }
