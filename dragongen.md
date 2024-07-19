@@ -3,11 +3,11 @@ layout: default
 title: "Dragon Generator"
 permalink: /dragongen.html/
 ---
-<p>You can generate a random dragon with this generator.</p>
+<p>The dragon will have a name and a size.</p>
 <form id="form1">
   <!-- Name -->
-  <label for="name">Enter the dragon's name: </label>
-  <input type="text" id="name" name="name" required><br>
+<!--   <label for="name">Enter the dragon's name: </label>
+  <input type="text" id="name" name="name" required><br> -->
   <!-- Size -->
   Select the dragon's size: <br>
   <input type="radio" id="small" name="size" value="Small" required>
@@ -24,7 +24,20 @@ permalink: /dragongen.html/
 <p>Result: </p>
 <p id="result"></p>
 <!-- JavaScript -->
-<script language="JavaScript">
+<script src="javascript/dragongen.js">
+  function showInput() {
+    let text = getName();
+    text += " the ";
+    const size = document.getElementsByName("size");
+    for (let i = 0; i < size.length; i++) {
+      if (size[i].checked) {
+        text += size[i].value + " Dragon";
+      }
+    }
+    document.getElementById("result").innerHTML = text;
+  }
+</script>
+<!-- <script language="JavaScript">
   function showInput() {
     let text = "";
     text += document.getElementById("name").value + " the ";
@@ -36,4 +49,4 @@ permalink: /dragongen.html/
     }
     document.getElementById("result").innerHTML = text;
   }
-</script>
+</script> -->
