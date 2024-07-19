@@ -2,7 +2,7 @@
 function getName() {
   const URL = "https://www.behindthename.com/api/random.json?number=1&key=br816490501";
   let name = "";
-  fetch ("URL")
+  fetch (URL)
     .then(response => {
       if (response.ok) {
         return response.json();
@@ -11,6 +11,7 @@ function getName() {
       }
     })
     .then(data => {
+      console.log(data);
       obj = JSON.parse(data);
       return obj.name;
     })
