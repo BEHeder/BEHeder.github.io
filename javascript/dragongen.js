@@ -12,7 +12,7 @@ function getName() {
     })
     .then(data => {
       obj = JSON.parse(data);
-      return obj[0];
+      return obj.names[0];
     })
     .catch(error => {
       return error;
