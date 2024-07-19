@@ -24,7 +24,7 @@ permalink: /dragongen.html/
 <p>Result: </p>
 <p id="result"></p>
 <!-- JavaScript -->
-<script src="javascript/dragongen.js">
+<script src="/javascript/dragongen.js">
   function showInput() {
     let text = getName();
     text += " the ";
