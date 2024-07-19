@@ -13,6 +13,9 @@ function getName() {
     .then(data => {
       console.log(data);
       obj = JSON.parse(data);
+      console.log(obj);
+      console.log(obj.names);
+      console.log(obj.names[0]);
       return obj.names[0];
     })
     .catch(error => {
