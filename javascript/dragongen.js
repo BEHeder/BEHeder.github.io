@@ -1,5 +1,5 @@
 // Names are provided via the API of www.behindthename.com
-function getName() = {
+function getName() {
   const URL = "https://www.behindthename.com/api/random.json?number=1&key=br816490501"
   let name = ""
   fetch ("URL")
