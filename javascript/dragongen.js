@@ -18,3 +18,15 @@ function getName() {
       return error;
     });
 }
+
+function showInput() {
+  let text = getName();
+  text += " the ";
+  const size = document.getElementsByName("size");
+  for (let i = 0; i < size.length; i++) {
+    if (size[i].checked) {
+      text += size[i].value + " Dragon";
+    }
+  }
+  document.getElementById("result").innerHTML = text;
+}
