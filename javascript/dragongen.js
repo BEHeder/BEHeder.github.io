@@ -11,8 +11,8 @@ function getName() {
       }
     })
     .then(data => {
-      obj = JSON.parse(data);
-      return obj.names[0];
+      // obj = JSON.parse(data);
+      return data.names[0];
     })
     .catch(error => {
       return error;
