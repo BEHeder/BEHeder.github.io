@@ -30,6 +30,16 @@ title: Bryan Heder's Website
 </p>
 <hr>
 
+<h2>Rock, Paper, Scissors</h2>
+<p>
+  This is a very simple implementation of Rock, Paper, Scissors, played in the terminal.
+  <br>
+  <a href="https://github.com/BEHeder/BEHeder.github.io/tree/main/RPS">
+    Rock, Paper, Scissors Code
+  </a>
+</p>
+<hr>
+
 <h2>Dragon Generator</h2>
 <p>
   A random generator that results in a dragon.
