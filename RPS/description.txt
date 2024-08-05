@@ -1,0 +1,2 @@
+This folder contains a very simple game of Rock Paper Scissors, played in the terminal.
+--Bryan Heder
