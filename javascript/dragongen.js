@@ -1,32 +1,19 @@
 // Names are provided via the API of www.behindthename.com
-function getName() {
+async function getName() {
   const URL = "https://www.behindthename.com/api/random.json?number=1&key=br816490501";
-  let name = "";
-  fetch (URL)
-    .then(response => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        throw new Error("API request failed!");
-      }
-    })
-    .then(data => {
-      // obj = JSON.parse(data);
-      return data.names[0];
-    })
-    .catch(error => {
-      return error;
-    });
+  const request = new Request(URL);
+  const response = await fetch(request);
+  const names = await response.json();
+  return names["names"][0];
 }
 
-function showInput() {
-  let text = getName();
-  text += " the ";
-  const size = document.getElementsByName("size");
-  for (let i = 0; i < size.length; i++) {
-    if (size[i].checked) {
-      text += size[i].value + " Dragon";
-    }
-  }
+function getSize() {
+  const sizes = ["Small", "Medium", "Large"];
+  return sizes[(Math.floor(Math.random() * sizes.length))];
+}
+
+async function showDragon() {
+  let text = await getName();
+  text += " the " + getSize() + " Dragon";
   document.getElementById("result").innerHTML = text;
 }
