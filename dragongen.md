@@ -4,20 +4,13 @@ title: "Dragon Generator"
 permalink: /dragongen.html/
 ---
 
-<p>The dragon will have a name and a size.</p>
+<p>
+  The dragon will have a name and a size.<br>
+  Names are thanks to the Behind the Name API.
+</p>
 <form id="form1">
-  <!-- Size -->
-  Select the dragon's size: <br>
-  <input type="radio" id="small" name="size" value="Small" required>
-  <label for="small">Small</label><br>
-  <input type="radio" id="medium" name="size" value="Medium" required>
-  <label for="medium">Medium</label><br>
-  <input type="radio" id="large" name="size" value="Large" required>
-  <label for="large">Large</label><br>
-  
-  <!-- Submit & Reset -->
-  <button type="button" onclick="showInput()">Submit</button>
-  <input type="reset">
+  <!-- Generate -->
+  <button type="button" onclick="showDragon()">Generate</button>
 </form>
 
 <!-- Output -->
