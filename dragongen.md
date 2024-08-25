@@ -5,7 +5,7 @@ permalink: /dragongen.html/
 ---
 
 <p>
-  The dragon will have a name and a size.<br>
+  The dragon will have a name, color, and size.<br>
   Names are thanks to the <a href="https://www.behindthename.com/">Behind the Name</a> API.
 </p>
 <form id="form1">
