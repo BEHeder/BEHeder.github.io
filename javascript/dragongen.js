@@ -25,7 +25,7 @@ async function getName() {
   return names["names"][0];
 }
 
-function getRandomItems(arrayOfItems) {
+function getRandomItem(arrayOfItems) {
   return arrayOfItems[(Math.floor(Math.random() * arrayOfItems.length))];
 }
 
