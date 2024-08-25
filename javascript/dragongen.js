@@ -1,4 +1,22 @@
 // Names are provided via the API of www.behindthename.com
+const colors = [
+  "Red",
+  "Orange",
+  "Yellow",
+  "Green",
+  "Blue",
+  "Indigo",
+  "Violet"
+];
+
+const sizes = [
+  "Tiny",
+  "Small",
+  "Medium",
+  "Large",
+  "Huge"
+];
+
 async function getName() {
   const URL = "https://www.behindthename.com/api/random.json?number=1&key=br816490501";
   const request = new Request(URL);
@@ -7,13 +25,12 @@ async function getName() {
   return names["names"][0];
 }
 
-function getSize() {
-  const sizes = ["Small", "Medium", "Large"];
-  return sizes[(Math.floor(Math.random() * sizes.length))];
+function getRandomItems(arrayOfItems) {
+  return arrayOfItems[(Math.floor(Math.random() * arrayOfItems.length))];
 }
 
 async function showDragon() {
   let text = await getName();
-  text += " the " + getSize() + " Dragon";
+  text += " the " + getRandomItem(sizes) + " " + getRandomItem(colors) + " Dragon";
   document.getElementById("result").innerHTML = text;
 }
