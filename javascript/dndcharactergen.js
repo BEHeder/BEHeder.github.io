@@ -2,30 +2,28 @@ function getRandomItem(arrayOfItems) {
     return arrayOfItems[(Math.floor(Math.random() * arrayOfItems.length))];
 }
 
-async function getClass() {
-    const url = "https://www.dnd5eapi.co/api/classes";
-    let classArray = [];
-    await fetch(url)
-        .then(response => response.json())
-        .then(result => classArray = result["results"])
-        .catch(error => console.log(error));
-    const randomClass = getRandomItem(classArray);
-    return randomClass["name"];
+async function getName() {
+    const URL = "https://www.behindthename.com/api/random.json?number=1&key=br816490501";
+    const request = new Request(URL);
+    const response = await fetch(request);
+    const names = await response.json();
+    return names["names"][0];
 }
 
-async function getRace() {
-    const url = "https://www.dnd5eapi.co/api/races";
-    let raceArray = [];
+async function fetchRandomItem(urlAdd) {
+    const url = "https://www.dnd5eapi.co/api/" + urlAdd;
+    let tempArray = [];
     await fetch(url)
         .then(response => response.json())
-        .then(result => raceArray = result["results"])
+        .then(result => tempArray = result["results"])
         .catch(error => console.log(error));
-    const randomRace = getRandomItem(raceArray);
-    return randomRace["name"];
+    const randomItem = getRandomItem(tempArray);
+    return randomItem["name"];
 }
 
 async function showChar() {
-    let text = "Class: " + await getClass() + "<br>";
-    text += "Race: " + await getRace();
+    let text = "Name: " + await getName() + "<br>";
+    text += "Race: " + await fetchRandomItem("races") + "<br>";
+    text += "Class: " + await fetchRandomItem("classes");
     document.getElementById("result").innerHTML = text;
 }
