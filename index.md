@@ -20,12 +20,15 @@ title: Bryan Heder's Website
 
 <h2>D&D Character Generator</h2>
 <p>
-  This project will be to develop a limited generator for a Dungeons & Dragons character. 
+  This project is to develop a generator for a Dungeons & Dragons character. 
   The company behind the D&D game released a System Reference Document (SRD) that has 
   some content available to the public without purchasing their products.
   <br>
-  <a href="https://github.com/BEHeder/BEHeder.github.io/tree/main/BEHeder_char_gen">
-    D&D Character Generator Code
+  <a href="https://beheder.github.io/dndcharactergen.html/">
+    Web D&D Character Generator
+  </a><br>
+  <a href="https://github.com/BEHeder/BEHeder.github.io/tree/main/BEHeder_char_gen/src/main/kotlin">
+    Kotlin D&D Character Generator Code
   </a>
 </p>
 <hr>
