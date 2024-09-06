@@ -13,6 +13,10 @@ permalink: /dndcharactergen.html/
   The SRD content is accessed via the D&D 5e SRD API. 
   <a href="https://www.dnd5eapi.co/">
     The API can be found here.
+  </a><br>
+  The names are accessed via the Behind the Name API.
+  <a href="https://www.behindthename.com/">
+    This website can be found here.
   </a>
 </p>
 <p>
