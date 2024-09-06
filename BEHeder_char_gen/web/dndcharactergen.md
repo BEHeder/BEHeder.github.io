@@ -23,4 +23,4 @@ permalink: /dndcharactergen.html/
 </form>
 <p id="result"></p>
 
-<script src="./dndcharactergen.js"></script>
+<script src="/javascript/dndcharactergen.js"></script>
