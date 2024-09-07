@@ -52,10 +52,11 @@ function rollScores() {
 }
 
 async function showChar() {
-    // Fetch the random name, race, and class
+    // Fetch the random name, race, class, and alignment
     let text = "Name: " + await getName() + "<br>";
     text += "Race: " + await fetchRandomItem("races") + "<br>";
     text += "Class: " + await fetchRandomItem("classes") + "<br>";
+    text += "Alignment: " + await fetchRandomItem("alignments") + "<br>";
 
     // Generate and list the 6 ability scores
     const scoresList = rollScores().join("<br>");
