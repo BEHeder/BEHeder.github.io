@@ -21,9 +21,44 @@ async function fetchRandomItem(urlAdd) {
     return randomItem["name"];
 }
 
+function rollDie(size) {
+    // The range will be 1 to the size of the die
+    return Math.floor((Math.random() * size) + 1);
+}
+
+function rollScore() {
+    // Simulate rolling 4d6
+    const rolls = [];
+    for (let i = 0; i < 4; i++) {
+        rolls.push(rollDie(6));
+    }
+
+    // Find and drop the lowest roll
+    // These two lines could be combined, but they're separated for reading.
+    let pos = rolls.indexOf(Math.min(...rolls));
+    rolls.splice(pos, 1);
+
+    // Calculate the score from the remaining 3d6
+    return rolls.reduce((total, next) => total + next);
+}
+
+function rollScores() {
+    // Simulate rolling 6 scores and return them
+    const scores = [];
+    for (let i = 0; i < 6; i++) {
+        scores.push(rollScore());
+    }
+    return scores;
+}
+
 async function showChar() {
+    // Fetch the random name, race, and class
     let text = "Name: " + await getName() + "<br>";
     text += "Race: " + await fetchRandomItem("races") + "<br>";
-    text += "Class: " + await fetchRandomItem("classes");
+    text += "Class: " + await fetchRandomItem("classes") + "<br>";
+
+    // Generate and list the 6 ability scores
+    const scoresList = rollScores().join("<br>");
+    text += "<u>Scores</u><br>" + scoresList;
     document.getElementById("result").innerHTML = text;
 }
