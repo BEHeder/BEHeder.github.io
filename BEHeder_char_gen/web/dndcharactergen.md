@@ -7,15 +7,15 @@ permalink: /dndcharactergen.html/
 <p>
   Under Construction<br>
   This character generator uses content from the Dungeons & Dragons 5e SRD. 
-  <a href="https://media.wizards.com/2016/downloads/DND/SRD-OGL_V5.1.pdf">
+  <a href="https://media.wizards.com/2016/downloads/DND/SRD-OGL_V5.1.pdf" target="_blank">
     The SRD can be found here.
   </a><br>
   The SRD content is accessed via the D&D 5e SRD API. 
-  <a href="https://www.dnd5eapi.co/">
+  <a href="https://www.dnd5eapi.co/" target="_blank">
     The API can be found here.
   </a><br>
   The names are accessed via the Behind the Name API.
-  <a href="https://www.behindthename.com/">
+  <a href="https://www.behindthename.com/" target="_blank">
     This website can be found here.
   </a>
 </p>
