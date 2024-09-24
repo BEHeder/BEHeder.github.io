@@ -2,7 +2,7 @@
 layout: default
 title: Bryan Heder's Website
 ---
-<h2>Senior Project</h2>
+<h2>Senior Project (Web)</h2>
 <p>
   The purpose of this project is to build a website 
   that can help bring together the members of the Clay Springs community 
@@ -18,7 +18,7 @@ title: Bryan Heder's Website
 </p>
 <hr>
 
-<h2>D&D Character Generator</h2>
+<h2>D&D Character Generator (Web & Kotlin)</h2>
 <p>
   This project is to develop a generator for a Dungeons & Dragons character. 
   The company behind the D&D game released a System Reference Document (SRD) that has 
@@ -33,7 +33,7 @@ title: Bryan Heder's Website
 </p>
 <hr>
 
-<h2>Rock, Paper, Scissors</h2>
+<h2>Rock, Paper, Scissors (C++)</h2>
 <p>
   This is a very simple implementation of Rock, Paper, Scissors, played in the terminal.
   <br>
@@ -43,7 +43,7 @@ title: Bryan Heder's Website
 </p>
 <hr>
 
-<h2>Dragon Generator</h2>
+<h2>Dragon Generator (Web)</h2>
 <p>
   A random generator that results in a dragon.
   <br>
