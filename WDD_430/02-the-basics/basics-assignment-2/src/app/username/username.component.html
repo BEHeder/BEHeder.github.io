@@ -1,0 +1,14 @@
+<!-- Post-assignment: Remember to use Bootstrap styling when needed/desired -->
+<input 
+    type="text"
+    [(ngModel)] = "username"
+    (input)="onType($event)">
+<p>{{ username }}</p>
+<!-- I could have coded directly next to [disabled] "username === ''"... -->
+<button
+    class="btn btn-primary"
+    [disabled]="!allowResetUsername"
+    (click)="onResetUsername($event)">
+    Reset Username
+</button>
+<!-- The (click) could also have been simply "username = ''"... -->
