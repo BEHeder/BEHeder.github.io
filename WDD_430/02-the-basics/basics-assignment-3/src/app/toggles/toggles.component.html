@@ -1,0 +1,18 @@
+<button 
+    class="btn btn-primary"
+    (click)="toggleParagraph()">
+    Display Details
+</button>
+<p *ngIf="paragraphDisplayed">The Shadoki Master was here!</p>
+<ol>
+    <li 
+        *ngFor="let toggle of toggles"
+        [ngStyle]="{backgroundColor: toggle >= 5 ? 'blue' : 'white'}"
+        [ngClass]="{fivePlus: toggle >= 5}">
+        {{ toggle }}
+    </li>
+</ol>
+<!-- backgroundColor can be 'transparent' instead of 'white'
+ instead of using a separate incrementing number, it's possible
+ to add in ngFor: "...; let i = index", then use that index for
+ the conditional statements -->
