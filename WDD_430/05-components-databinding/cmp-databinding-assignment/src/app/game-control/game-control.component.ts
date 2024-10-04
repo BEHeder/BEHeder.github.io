@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-game-control',
@@ -6,16 +6,18 @@ import { Component } from '@angular/core';
   styleUrl: './game-control.component.css'
 })
 export class GameControlComponent {
-  ref;
-  incremental = 0;
+  @Output() intervalFired = new EventEmitter<number>();
+  interval;
+  lastNumber = 0;
 
-  onStart() {
-    this.ref = setInterval(() => {
-      this.incremental++;
+  onStartGame() {
+    this.interval = setInterval(() => {
+      this.intervalFired.emit(this.lastNumber + 1);
+      this.lastNumber++;
     }, 1000);
   }
 
-  onStop() {
-    clearInterval(this.ref);
+  onPauseGame() {
+    clearInterval(this.interval);
   }
 }
