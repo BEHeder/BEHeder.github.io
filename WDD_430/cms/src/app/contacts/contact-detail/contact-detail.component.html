@@ -1,9 +1,10 @@
 <div class="row">
     <div class="col-xs-12">
         <h3>{{ contact.name }}</h3>
-        <div class="pull-left">
-            {{ contact.imageUrl }}
-        </div>
+        <img [src]="contact.imageUrl" 
+            alt="{{ contact.name }}" 
+            class="img-responsive pull-left"
+            style="max-height: 100px;">
         <span class="pull-right">
             <button class="btn btn-primary">Edit</button>
             <button class="btn btn-danger">Delete</button>
@@ -12,9 +13,7 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <!-- <p>Email: {{ contact.email }}</p>
-        <p>Phone: {{ contact.phone }}</p> -->
-        <h5>Email: </h5>
-        <h5>Phone: </h5>
+        <h5>Email: {{ contact.email }}</h5>
+        <h5>Phone: {{ contact.phone }}</h5>
     </div>
 </div>
