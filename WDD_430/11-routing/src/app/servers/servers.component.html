@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-4">
+    <div class="list-group">
+      <a
+        href="#"
+        class="list-group-item"
+        *ngFor="let server of servers">
+        {{ server.name }}
+      </a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <!-- Without the leading /, it's a relative path. With the leading /, it's an absolute path. -->
+    <!-- Having ./ is the same as having nothing at the beginning. -->
+    <!-- Starting with ../ goes up one level, then tries to load the path. -->
+    <!-- <a routerLink="servers">Reload Page</a> -->
+    <button class="btn btn-primary" (click)="onReload()">Reload Page</button>
+    <app-edit-server></app-edit-server>
+    <hr>
+    <app-server></app-server>
+  </div>
+</div>
+
