@@ -16,9 +16,13 @@ import { RouterModule, Routes } from '@angular/router';
 // The name 'appRoutes' could be anything...?
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'users', component: UsersComponent },
-  { path: 'users/:id/:name', component: UserComponent }, //the colon tells Angular this is a dynamic part of the path
-  { path: 'servers', component: ServersComponent }
+  { path: 'users', component: UsersComponent, children: [
+    { path: ':id/:name', component: UserComponent }, //the colon tells Angular this is a dynamic part of the path
+  ] },
+  { path: 'servers', component: ServersComponent, children: [
+    { path: ':id', component: ServerComponent },
+    { path: ':id/edit', component: EditServerComponent }
+  ] },
 ];
 
 @NgModule({
