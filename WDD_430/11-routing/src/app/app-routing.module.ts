@@ -9,6 +9,8 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
 import { Routes, RouterModule } from "@angular/router";
 import { AuthGuard } from "./auth-guard.service";
 import { CanDeactivateGuard } from "./servers/edit-server/can-deactivate-guard.service";
+import { ErrorPageComponent } from "./error-page/error-page.component";
+import { ServerResolver } from "./servers/server/server-resolver.service";
 
 // The name 'appRoutes' could be anything...?
 const appRoutes: Routes = [
@@ -22,16 +24,19 @@ const appRoutes: Routes = [
         canActivateChild: [AuthGuard],
         component: ServersComponent, 
         children: [
-      { path: ':id', component: ServerComponent },
+      { path: ':id', component: ServerComponent, resolve: {server: ServerResolver} },
       { path: ':id/edit', component: EditServerComponent, canDeactivate: [CanDeactivateGuard] }
     ] },
-    { path: 'not-found', component: PageNotFoundComponent },
+    // { path: 'not-found', component: PageNotFoundComponent },
+    { path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!'} },
     { path: '**', redirectTo: '/not-found' } // this is a wildcard or catch-all route; MAKE SURE THIS IS LAST IN YOUR LIST OF PATHS
   ];  
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes)
+      // RouterModule.forRoot(appRoutes, {useHash: true})
+      // useHash involves telling the server to ignore parsing the part of the URL after the hashtag that's introduced by this method, so that the client or Angular can parse it.
+      RouterModule.forRoot(appRoutes)
     ],
     exports: [RouterModule]
 })
