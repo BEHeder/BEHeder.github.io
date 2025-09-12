@@ -11,7 +11,7 @@ async function getName() {
 }
 
 async function fetchRandomItem(urlAdd) {
-    const url = "https://www.dnd5eapi.co/api/" + urlAdd;
+    const url = "https://www.dnd5eapi.co/api/2014/" + urlAdd;
     let tempArray = [];
     await fetch(url)
         .then(response => response.json())
