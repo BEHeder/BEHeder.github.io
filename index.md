@@ -49,3 +49,11 @@ title: Bryan Heder's Website
   <br>
   <a href="https://beheder.github.io/dragongen.html/">Dragon Generator</a>
 </p>
+<hr>
+
+<h2>Snake (Web)</h2>
+<p>
+  A Snake game built only using HTML, CSS, and JavaScript, by following this article: <a href="https://www.freecodecamp.org/news/think-like-a-programmer-how-to-build-snake-using-only-javascript-html-and-css-7b1479c3339e">Think like a programmer: How to build Snake using only JavaScript, HTML & CSS</a>
+  <br>
+  <a href="https://beheder.github.io/snake.html/">Snake</a>
+</p>
