@@ -9,7 +9,7 @@ permalink: /snake.html/
 <p>
     Under Construction
     <br>
-    Constructing this game follows the tutorial at <a href="https://www.freecodecamp.org/news/think-like-a-programmer-how-to-build-snake-using-only-javascript-html-and-css-7b1479c3339e">Think like a programmer: How to build Snake using only JavaScript, HTML & CSS</a>, with additional help from other resources. To be honest, the Free Code Camp article has typos and such, making it a little difficult to follow.
+    Constructing this game follows the tutorial at <a href="https://www.freecodecamp.org/news/think-like-a-programmer-how-to-build-snake-using-only-javascript-html-and-css-7b1479c3339e">Think like a programmer: How to build Snake using only JavaScript, HTML & CSS</a>, with additional help from the W3Schools website. To be honest, the Free Code Camp article has typos and such, making it a little difficult to follow.
 </p>
 
 <!-- JavaScript -->
@@ -24,6 +24,12 @@ permalink: /snake.html/
         {x: 120, y: 150},
         {x: 110, y: 150}
     ];
+    var dx = 10;
+    var dy = 0;
+    advanceSnake();
+    dx = 0;
+    dy = -10 // This moves it upwards
+    advanceSnake();
     drawSnake();
 
     // Write the function for drawing the whole snake
@@ -37,5 +43,12 @@ permalink: /snake.html/
         ctx.strokeStyle = 'darkgreen';
         ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
         ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
+    }
+
+    // Function for moving the snake
+    function advanceSnake() {
+        const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+        snake.unshift(head);
+        snake.pop();
     }
 </script>
