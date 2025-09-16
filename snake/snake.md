@@ -7,9 +7,13 @@ permalink: /snake.html/
 <div id="score">0</div>
 <canvas id="gameCanvas" width="300" height="300"></canvas>
 
-<h3>Under Construction</h3>
+<h3>Welcome!</h3>
 <p>
-    Constructing this game follows the tutorial at <a href="https://www.freecodecamp.org/news/think-like-a-programmer-how-to-build-snake-using-only-javascript-html-and-css-7b1479c3339e">Think like a programmer: How to build Snake using only JavaScript, HTML & CSS</a>.
+    Constructing this game followed the tutorial at <a href="https://www.freecodecamp.org/news/think-like-a-programmer-how-to-build-snake-using-only-javascript-html-and-css-7b1479c3339e">Think like a programmer: How to build Snake using only JavaScript, HTML & CSS</a>.
+</p>
+<h3>Known Bug</h3>
+<p>
+    The snake colliding with itself only ends the game if it collides with one of the first five blocks.
 </p>
 
 <!-- JavaScript -->
