@@ -3,12 +3,13 @@ layout: default
 title: "Snake"
 permalink: /snake.html/
 ---
+<!-- HTML -->
 <!-- Probably put the canvas style in a separate CSS file. -->
-<canvas id="gameCanvas" width="300" height="300" style="border:1px solid #000000;"></canvas>
+<!--  style="border:1px solid #000000;" -->
+<canvas id="gameCanvas" width="300" height="300"></canvas>
 
+<h3>Under Construction</h3>
 <p>
-    Under Construction
-    <br>
     Constructing this game follows the tutorial at <a href="https://www.freecodecamp.org/news/think-like-a-programmer-how-to-build-snake-using-only-javascript-html-and-css-7b1479c3339e">Think like a programmer: How to build Snake using only JavaScript, HTML & CSS</a>, with additional help from the W3Schools website. To be honest, the Free Code Camp article has typos and such, making it a little difficult to follow.
 </p>
 
@@ -31,6 +32,14 @@ permalink: /snake.html/
     dy = -10 // This moves it upwards
     advanceSnake();
     drawSnake();
+
+    // Function for drawing the canvas, I guess?
+    function clearCanvas() {
+        ctx.fillStyle = "white";
+        ctx.strokeStyle = "black";
+        ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+        ctx.strokeRect(0, 0, gameCanvas.width, gameCanvas.height);
+    }
 
     // Write the function for drawing the whole snake
     function drawSnake() {
