@@ -4,8 +4,6 @@ title: "Snake"
 permalink: /snake.html/
 ---
 <!-- HTML -->
-<!-- Probably put the canvas style in a separate CSS file. -->
-<!--  style="border:1px solid #000000;" -->
 <canvas id="gameCanvas" width="300" height="300"></canvas>
 
 <h3>Under Construction</h3>
@@ -28,11 +26,21 @@ permalink: /snake.html/
     clearCanvas();
     var dx = 10;
     var dy = 0;
-    advanceSnake();
-    dx = 0;
-    dy = -10 // This moves it upwards
-    advanceSnake();
+    // advanceSnake();
+    // dx = 0;
+    // dy = -10 // This moves it upwards
+    // advanceSnake();
     drawSnake();
+
+    // Main function
+    function main() {
+        setTimeout(function onTick() {
+            clearCanvas();
+            advanceSnake();
+            drawSnake();
+            main();
+        }, 100)
+    }
 
     // Function for drawing the canvas, I guess?
     function clearCanvas() {
