@@ -25,6 +25,7 @@ permalink: /snake.html/
         {x: 120, y: 150},
         {x: 110, y: 150}
     ];
+    clearCanvas();
     var dx = 10;
     var dy = 0;
     advanceSnake();
