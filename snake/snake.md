@@ -25,6 +25,7 @@ permalink: /snake.html/
         {x: 110, y: 150}
     ];
     let score = 0;
+    let changingDirection = false;
     clearCanvas();
     var dx = 10;
     var dy = 0;
@@ -45,6 +46,7 @@ permalink: /snake.html/
             return;
         }
         setTimeout(function onTick() {
+            changingDirection = false;
             clearCanvas();
             drawFood();
             advanceSnake();
@@ -100,6 +102,13 @@ permalink: /snake.html/
         const UP_KEY = 38;
         const DOWN_KEY = 40;
         const keyPressed = event.keyCode;
+
+        // return early if changingDirection is already true
+        // otherwise, change it to true
+        if (changingDirection) {
+            return;
+        }
+        changingDirection = true;
 
         // These are to help check if the snake is moving a certain direction
         const goingUp = dy === -10;
