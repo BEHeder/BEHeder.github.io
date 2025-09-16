@@ -32,6 +32,7 @@ permalink: /snake.html/
     // advanceSnake();
     drawSnake();
     main();
+    document.addEventListener("keydown", changeDirection);
 
     // Main function
     function main() {
@@ -62,6 +63,41 @@ permalink: /snake.html/
         ctx.strokeStyle = 'darkgreen';
         ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
         ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
+    }
+
+    // Changing the snake's direction
+    function changeDirection(event) {
+        // I guess these are the key codes for the arrow keys...
+        const LEFT_KEY = 37;
+        const RIGHT_KEY = 39;
+        const UP_KEY = 38;
+        const DOWN_KEY = 40;
+        const keyPressed = event.keyCode;
+
+        // These are to help check if the snake is moving a certain direction
+        const goingUp = dy === -10;
+        const goingDown = dy === 10;
+        const goingRight = dx === 10;
+        const goingLeft = dx === -10;
+
+        // This is where the action starts to happen when an arrow key is pressed
+        // We also make sure to prevent the snake from reversing
+        if (keyPressed === LEFT_KEY && !goingRight) {
+            dx = -10;
+            dy = 0;
+        }
+        if (keyPressed === UP_KEY && !goingDown) {
+            dx = 0;
+            dy = -10;
+        }
+        if (keyPressed === RIGHT_KEY && !goingLeft) {
+            dx = 10;
+            dy = 0;
+        }
+        if (keyPressed === DOWN_KEY && !goingUp) {
+            dx = 0;
+            dy = 10;
+        }
     }
 
     // Function for moving the snake
