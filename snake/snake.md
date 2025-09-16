@@ -4,11 +4,12 @@ title: "Snake"
 permalink: /snake.html/
 ---
 <!-- HTML -->
+<div id="score">0</div>
 <canvas id="gameCanvas" width="300" height="300"></canvas>
 
 <h3>Under Construction</h3>
 <p>
-    Constructing this game follows the tutorial at <a href="https://www.freecodecamp.org/news/think-like-a-programmer-how-to-build-snake-using-only-javascript-html-and-css-7b1479c3339e">Think like a programmer: How to build Snake using only JavaScript, HTML & CSS</a>, with additional help from the W3Schools website. To be honest, the Free Code Camp article has typos and such, making it a little difficult to follow.
+    Constructing this game follows the tutorial at <a href="https://www.freecodecamp.org/news/think-like-a-programmer-how-to-build-snake-using-only-javascript-html-and-css-7b1479c3339e">Think like a programmer: How to build Snake using only JavaScript, HTML & CSS</a>.
 </p>
 
 <!-- JavaScript -->
@@ -23,6 +24,7 @@ permalink: /snake.html/
         {x: 120, y: 150},
         {x: 110, y: 150}
     ];
+    let score = 0;
     clearCanvas();
     var dx = 10;
     var dy = 0;
@@ -39,6 +41,9 @@ permalink: /snake.html/
 
     // Main function
     function main() {
+        if (didGameEnd()) {
+            return;
+        }
         setTimeout(function onTick() {
             clearCanvas();
             drawFood();
@@ -54,6 +59,24 @@ permalink: /snake.html/
         ctx.strokeStyle = "black";
         ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
         ctx.strokeRect(0, 0, gameCanvas.width, gameCanvas.height);
+    }
+
+    // Did the snake collide with itself or one of the walls?
+    function didGameEnd() {
+        for (let i = 4; i < snake.length; i++) {
+            // First, check if the snake collides with itself
+            const didCollide = snake[i].x === snake[0].x && snake[i].y === snake[0].y;
+            if (didCollide) {
+                return true;
+            }
+
+            // Now, start checking if the snake collides with a wall
+            const hitLeftWall = snake[0].x < 0;
+            const hitRightWall = snake[0].x > gameCanvas.width - 10;
+            const hitTopWall = snake[0].y < 0;
+            const hitBottomWall = snake[0].y > gameCanvas.height - 10;
+            return hitLeftWall || hitRightWall || hitTopWall || hitBottomWall;
+        }
     }
 
     // Write the function for drawing the whole snake
@@ -110,6 +133,8 @@ permalink: /snake.html/
         snake.unshift(head);
         const didEatFood = snake[0].x === foodX && snake[0].y === foodY;
         if (didEatFood) {
+            score += 10;
+            document.getElementById('score').innerHTML = score;
             createFood();
         }
         else {
