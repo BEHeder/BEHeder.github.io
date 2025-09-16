@@ -26,11 +26,14 @@ permalink: /snake.html/
     clearCanvas();
     var dx = 10;
     var dy = 0;
-    // advanceSnake();
-    // dx = 0;
-    // dy = -10 // This moves it upwards
-    // advanceSnake();
     drawSnake();
+    createFood();
+    snake.forEach(function isFoodOnSnake(part) {
+        const foodIsOnSnake = part.x == foodX && part.y == foodY;
+        if (foodIsOnSnake) {
+            createFood();
+        }
+    })
     main();
     document.addEventListener("keydown", changeDirection);
 
@@ -38,6 +41,7 @@ permalink: /snake.html/
     function main() {
         setTimeout(function onTick() {
             clearCanvas();
+            drawFood();
             advanceSnake();
             drawSnake();
             main();
@@ -100,10 +104,35 @@ permalink: /snake.html/
         }
     }
 
-    // Function for moving the snake
+    // Function for moving the snake and checking if it's eating food
     function advanceSnake() {
         const head = {x: snake[0].x + dx, y: snake[0].y + dy};
         snake.unshift(head);
-        snake.pop();
+        const didEatFood = snake[0].x === foodX && snake[0].y === foodY;
+        if (didEatFood) {
+            createFood();
+        }
+        else {
+            snake.pop();
+        }
+    }
+
+    // Create the food, which asks for two random coordinates
+    function createFood() {
+        foodX = randomTen(0, gameCanvas.width - 10);
+        foodY = randomTen(0, gameCanvas.height - 10);
+    }
+
+    // Generate each random coordinate for the food
+    function randomTen(min, max) {
+        return Math.round((Math.random() * (max-min) + min) / 10) * 10;
+    }
+
+    // Make sure to draw the food
+    function drawFood() {
+        ctx.fillStyle = 'red';
+        ctx.strokeStyle = 'darkred';
+        ctx.fillRect(foodX, foodY, 10, 10);
+        ctx.strokeRect(foodX, foodY, 10, 10);
     }
 </script>
