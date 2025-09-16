@@ -71,18 +71,19 @@ permalink: /snake.html/
     function didGameEnd() {
         for (let i = 4; i < snake.length; i++) {
             // First, check if the snake collides with itself
-            const didCollide = snake[i].x === snake[0].x && snake[i].y === snake[0].y;
+            const didCollide = ((snake[i].x === snake[0].x) && (snake[i].y === snake[0].y));
             if (didCollide) {
                 return true;
             }
-
-            // Now, start checking if the snake collides with a wall
-            const hitLeftWall = snake[0].x < 0;
-            const hitRightWall = snake[0].x > gameCanvas.width - 10;
-            const hitTopWall = snake[0].y < 0;
-            const hitBottomWall = snake[0].y > gameCanvas.height - 10;
-            return hitLeftWall || hitRightWall || hitTopWall || hitBottomWall;
         }
+        
+        // Now, start checking if the snake collides with a wall
+        const hitLeftWall = snake[0].x < 0;
+        const hitRightWall = snake[0].x > gameCanvas.width - 10;
+        const hitTopWall = snake[0].y < 0;
+        const hitBottomWall = snake[0].y > gameCanvas.height - 10;
+        return hitLeftWall || hitRightWall || hitTopWall || hitBottomWall;
+
     }
 
     // Write the function for drawing the whole snake
