@@ -13,7 +13,9 @@ permalink: /snake.html/
 </p>
 <h3>Known Bug</h3>
 <p>
-    The snake colliding with itself only ends the game if it collides with one of the first five blocks.
+    <del>The snake colliding with itself only ends the game if it collides with one of the first five blocks.</del>
+    <br>
+    All I had to do was move a bit of code outside of a loop because it didn't belong in that loop.
 </p>
 
 <!-- JavaScript -->
