@@ -31,6 +31,7 @@ permalink: /snake.html/
     // dy = -10 // This moves it upwards
     // advanceSnake();
     drawSnake();
+    main();
 
     // Main function
     function main() {
